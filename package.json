@@ -93,8 +93,13 @@
     "india",
     "payments"
   ],
-  "repository": {
+   "repository": {
     "type": "git",
-    "url": "https://github.com/your-org/setu-node"
-  }
+    "url": "git+https://github.com/iamkanishka/setu-client.git"
+  },
+  "homepage": "https://github.com/iamkanishka/setu-client#readme",
+  "bugs": {
+    "url": "https://github.com/iamkanishka/setu-client/issues"
+  },
+  "funding": "https://github.com/sponsors/iamkanishka"
 }

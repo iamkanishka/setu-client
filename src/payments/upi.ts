@@ -339,10 +339,7 @@ export async function createCollect(
   );
   if (!v.ok) return err(v.error);
 
-  const body = camelize({ ...params, currency: params.currency ?? "INR" } as Record<
-    string,
-    unknown
-  >);
+  const body = camelize({ ...params, currency: params.currency ?? "INR" });
   return withToken(cfg, (token) =>
     doPost(cfg, "/v1/merchants/collect", merchantHeaders(token, merchantId), body)
   );
@@ -606,7 +603,7 @@ export async function createRefund(
     ...params,
     type: params.type ?? "online",
     currency: params.currency ?? "INR",
-  } as Record<string, unknown>);
+  });
 
   return withToken(cfg, (token) =>
     doPost(cfg, "/v1/merchants/refunds", merchantHeaders(token, merchantId), body)
